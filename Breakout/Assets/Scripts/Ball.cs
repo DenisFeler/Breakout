@@ -4,7 +4,7 @@ public class Ball : MonoBehaviour
 {
     //Initial Variables
     public new Rigidbody2D rigidbody { get; private set; }
-    public float speed = 750f;
+    public float speed = 10f;
 
     //Get the gameObjects rigidbody
     private void Awake()
