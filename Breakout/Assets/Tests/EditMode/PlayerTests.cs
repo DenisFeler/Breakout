@@ -6,20 +6,17 @@ using UnityEngine.TestTools;
 
 public class PlayerTests
 {
-    // A Test behaves as an ordinary method
+    public Player player = new Player();
+
     [Test]
-    public void PlayerTestsSimplePasses()
+    public void PlayerTestRight()
     {
-        // Use the Assert class to test conditions
+        Assert.AreEqual(new Vector2(1, 0), Vector2.right);
     }
 
-    // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-    // `yield return null;` to skip a frame.
-    [UnityTest]
-    public IEnumerator PlayerTestsWithEnumeratorPasses()
+    [Test]
+    public void PlayerTestLeft()
     {
-        // Use the Assert class to test conditions.
-        // Use yield to skip a frame.
-        yield return null;
+        Assert.AreEqual(new Vector2(-1, 0), Vector2.left);
     }
 }

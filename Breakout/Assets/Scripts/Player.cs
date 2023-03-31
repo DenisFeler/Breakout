@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
     //Initial Variables
     public new Rigidbody2D rigidbody { get; private set; }
     public Vector2 direction { get; private set; }
+    public Player player;
     public float speed = 30f;
     public float maxBounceAngle = 80f;
 

@@ -1726,8 +1726,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c541e2d02271f3e4c80fe9e401e0d082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   speed: 30
-  maxBounceAngle: 80
+  maxBounceAngle: 75
 --- !u!1001 &1808699577
 PrefabInstance:
   m_ObjectHideFlags: 0
