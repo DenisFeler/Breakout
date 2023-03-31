@@ -15,6 +15,14 @@ public class Ball : MonoBehaviour
     //Delays the balls flight start
     private void Start()
     {
+        ResetBall();
+    }
+
+    public void ResetBall()
+    {
+        this.transform.position = Vector2.zero;
+        this.rigidbody.velocity = Vector2.zero;
+        
         Invoke(nameof(RdmTrajectory), 1f);
     }
 

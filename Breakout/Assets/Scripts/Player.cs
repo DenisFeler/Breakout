@@ -14,6 +14,12 @@ public class Player : MonoBehaviour
         this.rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    public void ResetPlayer()
+    {
+        this.transform.position = new Vector2(0f, this.transform.position.y);
+        this.rigidbody.velocity = Vector2.zero;
+    }
+
     //Get the left and right inputs from the player, as well as the movement halt
     private void Update()
     {
