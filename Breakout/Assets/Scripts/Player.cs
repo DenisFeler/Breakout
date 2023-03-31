@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
         this.rigidbody = GetComponent<Rigidbody2D>();
     }
 
+    //Get player paddle to initial pos on reset
     public void ResetPlayer()
     {
         this.transform.position = new Vector2(0f, this.transform.position.y);
@@ -68,7 +69,7 @@ public class Player : MonoBehaviour
             float bounceAngle = (offset / width) * this.maxBounceAngle;
             float newAngle = Mathf.Clamp(currentAngle + bounceAngle, -this.maxBounceAngle, this.maxBounceAngle);
 
-            //Relative rotation calculation given be the angle, for a responsive bounce
+            //Relative rotation calculation given by the angle, for a responsive bounce depending on contact point of ball to paddle
             Quaternion rotation = Quaternion.AngleAxis(newAngle, Vector3.forward);
             ball.rigidbody.velocity = rotation * Vector2.up * ball.rigidbody.velocity.magnitude;
         }

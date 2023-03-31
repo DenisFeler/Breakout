@@ -12,12 +12,13 @@ public class Ball : MonoBehaviour
         this.rigidbody = GetComponent<Rigidbody2D>();
     }
 
-    //Delays the balls flight start
+    //Execute the ball reset on start
     private void Start()
     {
         ResetBall();
     }
 
+    //Reset the ball to original position and randomize trajectory on reset and load up
     public void ResetBall()
     {
         this.transform.position = Vector2.zero;
@@ -26,6 +27,7 @@ public class Ball : MonoBehaviour
         Invoke(nameof(RdmTrajectory), 1f);
     }
 
+    //Give the ball a fixed speed calculation not relevant to the fps
     private void FixedUpdate()
     {
         rigidbody.velocity = rigidbody.velocity.normalized * speed;
