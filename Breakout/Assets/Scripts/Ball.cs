@@ -18,6 +18,11 @@ public class Ball : MonoBehaviour
         Invoke(nameof(RdmTrajectory), 1f);
     }
 
+    private void FixedUpdate()
+    {
+        rigidbody.velocity = rigidbody.velocity.normalized * speed;
+    }
+
     //Randomizes the balls trajectory upon game start
     private void RdmTrajectory()
     {
